@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    string[]? days = ViewData["days"] as string[];
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to COMP4870</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <ul style="list-style: none">
+        @foreach (var item in days!)
+        {
+            <li>@item</li>
+        }
+    </ul>
+</div>
