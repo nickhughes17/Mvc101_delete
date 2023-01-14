@@ -1,0 +1,16 @@
+@using System;
+@{
+    ViewData["Title"] = "Files";
+    
+}
+
+<div class="text-center">
+    <h1 class="display-4">Files</h1>
+    <ul>
+        @foreach (var item in Model)
+        {
+            var name = System.IO.Path.GetFileName(item);
+            <li><a href=""><a asp-controller="Files" asp-action="Content" asp-route-id="@name">@name</a></a></li>
+        }
+    </ul>
+</div>
